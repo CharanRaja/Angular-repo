@@ -1,0 +1,22 @@
+<div class="text-center">
+  <h2> USER LIST</h2>
+</div>
+<table style="width:100% ;margin-top: 30px;">
+  <tr>
+    <th>S.No</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Mobile</th>
+    <th>Email</th>
+    <th>Address</th>
+  </tr>
+  <tr *ngFor="let item of userData; let i = index">
+    <td class="text-center">{{i + 1}}</td>
+    <td class="text-center">{{item.firstName}}</td>
+    <td class="text-center">{{item.lastName}}</td>
+    <td class="text-center">{{item.mobile}}</td>
+    <td class="text-center">{{item.email}}</td>
+    <td class="text-center">{{item.address}}</td>
+  </tr>
+</table>
+<button (click)="back()">Back</button>

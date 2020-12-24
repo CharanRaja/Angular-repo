@@ -1,0 +1,28 @@
+<div class="center">
+  <h2> LOGIN FORM</h2>
+</div>
+<div class="content" role="main">
+  <form name="loginFormGroup" [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div class="form-group">
+        <label for="title">Email Id</label>&nbsp;&nbsp;
+        <input type="text" placeholder="Enter Email" class="form-control" formControlName="email_id" required />
+        <div class="red" *ngIf="submitted && f.email_id.errors">
+          Email is required
+        </div>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+      <div class="form-group">
+        <label for="title">Password</label>&nbsp;&nbsp;
+        <input type="text" placeholder="Enter Password" class="form-control" formControlName="password" required />
+        <div class="red" *ngIf="submitted && f.password.errors">
+          Password is required
+        </div>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+    </div>
+    &nbsp;&nbsp;&nbsp;
+    <span><button class="blue" type="submit">Submit</button></span>&nbsp;&nbsp;
+    <span><button (click)="UserRegister()">Register</button></span>
+  </form>
+</div>
